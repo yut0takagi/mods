@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security problem / セキュリティの問題
+    url: https://github.com/yut0takagi/mods/security/policy
+    about: Report it privately, not as an issue / Issue ではなく非公開で知らせてください
