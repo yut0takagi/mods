@@ -9,6 +9,7 @@
 - 不具合の報告と要望は [Issues](https://github.com/yut0takagi/mods/issues) に書いてください。テンプレートがあります
 - 新しい mod や、既存の mod の動きを変える提案は、PR の前に Issue で相談してください。誤字や小さな不具合の修正は、いきなり PR でかまいません
 - セキュリティにかかわる問題は Issue にせず、[SECURITY](SECURITY.md#日本語) の手順で知らせてください
+- やり取りは [行動規範](CODE_OF_CONDUCT.ja.md) に沿ってください
 
 ## 用意するもの
 
@@ -97,6 +98,8 @@ mod ごとに版を持ちます（[セマンティック バージョニング](
 - commit メッセージは `種類(mod): 内容` の形にします。種類は `feat`・`fix`・`docs`・`test`・`refactor`・`chore` のどれかです。例: `fix(session-diff): コミットのないリポジトリで差分が空になるのを直す`
 - PR を出す前に、触った mod の `claude plugin validate` と `claude plugin test`、型検査を通してください
 - PR のテンプレートのチェック項目を埋めてください
+
+PR を出すと、GitHub Actions が 9 本すべての mod で validate・テスト・型検査を回します。Claude Code は、確かめた版（2.1.294）と最新版の 2 通りで動かします。確かめた版で落ちたら PR を直してください。最新版だけで落ちたときは PR を止めません。Claude Code の更新で mod の API が変わった合図として扱い、別に直します。
 
 ## ライセンス
 

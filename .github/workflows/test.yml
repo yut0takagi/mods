@@ -1,0 +1,49 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Claude Code ${{ matrix.claude-code }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 確かめた版と、最新版。mod の API は early access なので、最新版で落ちたら API が変わった合図
+        claude-code: ['2.1.294', 'latest']
+    # 最新版での失敗は知らせるだけにして、PR は止めない
+    continue-on-error: ${{ matrix.claude-code == 'latest' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code@${{ matrix.claude-code }}
+
+      - name: Validate the marketplace
+        run: claude plugin validate .
+
+      - name: Validate, test and type-check each mod
+        run: |
+          status=0
+          for manifest in */.claude-plugin/plugin.json; do
+            mod="${manifest%%/*}"
+            echo "::group::$mod"
+            claude plugin validate "./$mod" || status=1
+            claude plugin test "./$mod" || status=1
+            # 型は、エンジンが mod を読み込んだときにだけ .claude-plugin/types/ に書かれる。
+            # ログインしていない claude -p も、"Not logged in" で終わる前に mod を読み込むので、それで書かせる
+            echo hi | claude -p --plugin-dir "./$mod" --max-turns 1 > /dev/null 2>&1 || true
+            npx --yes --package=typescript@5 -- tsc -p "./$mod" || status=1
+            echo "::endgroup::"
+          done
+          exit "$status"

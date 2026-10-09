@@ -9,6 +9,7 @@ Bug reports, fixes and ideas for new mods are welcome. This page is for people w
 - Report bugs and request features in [Issues](https://github.com/yut0takagi/mods/issues). There are templates
 - Discuss a new mod, or a change to how an existing mod behaves, in an issue before opening a pull request. Typos and small bug fixes can go straight to a pull request
 - Do not report security problems as issues; follow [SECURITY](SECURITY.md)
+- Please follow the [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## What you need
 
@@ -97,6 +98,8 @@ Each mod has its own version ([Semantic Versioning](https://semver.org/)). When 
 - Write commit messages as `type(mod): summary`, where type is one of `feat`, `fix`, `docs`, `test`, `refactor` and `chore`. Example: `fix(session-diff): show diffs in a repository with no commits`
 - Before opening a pull request, run `claude plugin validate`, `claude plugin test` and the type check for each mod you touched
 - Fill in the checklist in the pull request template
+
+When you open a pull request, GitHub Actions validates, tests and type-checks all nine mods, on two versions of Claude Code: the verified one (2.1.294) and the latest. A failure on the verified version needs fixing in the pull request. A failure on the latest version alone does not block it; it is treated as a sign that a Claude Code update changed the mod API, and fixed separately.
 
 ## License
 

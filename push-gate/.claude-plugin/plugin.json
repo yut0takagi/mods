@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "git push などを止め、人が承認ボタンを押した 1 回だけ通す",
   "author": { "name": "Yuto Takagi", "url": "https://github.com/yut0takagi" },
-  "homepage": "https://github.com/yut0takagi/mods/tree/main/push-gate",
+  "homepage": "https://github.com/yut0takagi/mods/blob/main/docs/mods/push-gate.md",
   "repository": "https://github.com/yut0takagi/mods",
   "license": "MIT",
   "keywords": ["git", "push", "approval", "guard"],
