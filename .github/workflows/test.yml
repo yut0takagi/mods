@@ -33,6 +33,8 @@ jobs:
         run: claude plugin validate .
 
       - name: Validate, test and type-check each mod
+        env:
+          IS_LATEST: ${{ matrix.claude-code == 'latest' }}
         run: |
           status=0
           for manifest in */.claude-plugin/plugin.json; do
@@ -41,9 +43,17 @@ jobs:
             claude plugin validate "./$mod" || status=1
             claude plugin test "./$mod" || status=1
             # 型は、エンジンが mod を読み込んだときにだけ .claude-plugin/types/ に書かれる。
-            # ログインしていない claude -p も、"Not logged in" で終わる前に mod を読み込むので、それで書かせる
+            # 2.1.294 では、ログインしていない claude -p も "Not logged in" で終わる前に読み込んで書く。
+            # 2.1.295 はこの形では書かないので、最新版で型がなければ型検査だけ飛ばす（テストと validate は回す）
             echo hi | claude -p --plugin-dir "./$mod" --max-turns 1 > /dev/null 2>&1 || true
-            npx --yes --package=typescript@5 -- tsc -p "./$mod" || status=1
+            if [ -f "./$mod/.claude-plugin/types/tsconfig.json" ]; then
+              npx --yes --package=typescript@5 -- tsc -p "./$mod" || status=1
+            elif [ "$IS_LATEST" = "true" ]; then
+              echo "::warning::$mod: この版の Claude Code は型を書かなかったので、型検査を飛ばした"
+            else
+              echo "::error::$mod: Claude Code が .claude-plugin/types/ を書かなかった"
+              status=1
+            fi
             echo "::endgroup::"
           done
           exit "$status"
