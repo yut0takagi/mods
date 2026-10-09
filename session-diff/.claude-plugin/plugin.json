@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "このセッションが Edit・Write で変えたファイルと増減をペインに並べ、選ぶと差分を出す",
   "author": { "name": "Yuto Takagi", "url": "https://github.com/yut0takagi" },
-  "homepage": "https://github.com/yut0takagi/mods/tree/main/session-diff",
+  "homepage": "https://github.com/yut0takagi/mods/blob/main/docs/mods/session-diff.md",
   "repository": "https://github.com/yut0takagi/mods",
   "license": "MIT",
   "keywords": ["git", "diff", "pane", "review"],
