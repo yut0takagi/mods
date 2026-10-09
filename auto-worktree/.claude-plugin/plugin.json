@@ -1,0 +1,10 @@
+{
+  "name": "auto-worktree",
+  "version": "0.1.0",
+  "description": "セッションの最初のプロンプトを送ったときに、git のワークツリーを作ってそこへ移る",
+  "author": { "name": "Yuto Takagi", "url": "https://github.com/yut0takagi" },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/auto-worktree",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": ["git", "worktree", "isolation"]
+}

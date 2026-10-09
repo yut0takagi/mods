@@ -1,0 +1,64 @@
+{
+  "name": "yut0takagi-mods",
+  "description": "Claude Code の mod（関数フックのプラグイン）集",
+  "owner": {
+    "name": "Yuto Takagi",
+    "url": "https://github.com/yut0takagi"
+  },
+  "plugins": [
+    {
+      "name": "branch-watch",
+      "source": "./branch-watch",
+      "description": "ステータス行に worktree / branch を出し、どのセッションがどの worktree のどのブランチで作業しているかをペインに並べる。別のセッションが切り替えたブランチでの commit を止める",
+      "version": "0.1.0"
+    },
+    {
+      "name": "push-gate",
+      "source": "./push-gate",
+      "description": "git push などを止め、人が承認ボタンを押した 1 回だけ通す",
+      "version": "0.1.0"
+    },
+    {
+      "name": "ja-check",
+      "source": "./ja-check",
+      "description": "返答が英語で書き出されたら知らせる。設定で日本語での書き直しを頼める",
+      "version": "0.1.0"
+    },
+    {
+      "name": "done-chime",
+      "source": "./done-chime",
+      "description": "長いターンが終わったときと、許可を待っているときに音とトーストで知らせる",
+      "version": "0.1.0"
+    },
+    {
+      "name": "side-question",
+      "source": "./side-question",
+      "description": "/btw で、作業を止めずに会話の続きとして脇道の質問をし、答えをペインに出す。答えは会話に残らない",
+      "version": "0.1.0"
+    },
+    {
+      "name": "session-diff",
+      "source": "./session-diff",
+      "description": "このセッションが Edit・Write で変えたファイルと増減をペインに並べ、選ぶと差分を出す",
+      "version": "0.1.0"
+    },
+    {
+      "name": "pr-pane",
+      "source": "./pr-pane",
+      "description": "開いている PR と CI の状態を gh で定期的に取り、ステータス行とペインに出す",
+      "version": "0.1.0"
+    },
+    {
+      "name": "usage-meter",
+      "source": "./usage-meter",
+      "description": "ターンごとのトークン数とキャッシュの割合をステータス行に出し、セッション中の推移をペインにグラフで描く",
+      "version": "0.1.0"
+    },
+    {
+      "name": "auto-worktree",
+      "source": "./auto-worktree",
+      "description": "セッションの最初のプロンプトを送ったときに、git のワークツリーを作ってそこへ移る",
+      "version": "0.1.0"
+    }
+  ]
+}

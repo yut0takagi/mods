@@ -1,0 +1,33 @@
+{
+  "name": "pr-pane",
+  "version": "0.1.0",
+  "description": "開いている PR と CI の状態を gh で定期的に取り、ステータス行とペインに出す",
+  "author": {
+    "name": "Yuto Takagi",
+    "url": "https://github.com/yut0takagi"
+  },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/pr-pane",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": [
+    "github",
+    "pull-request",
+    "ci",
+    "pane"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "base": {
+      "type": "string",
+      "title": "宛先ブランチ",
+      "description": "この宛先の PR だけを出す（例: main、develop）。空ならすべての開いている PR",
+      "default": ""
+    },
+    "intervalSeconds": {
+      "type": "number",
+      "title": "取り直す間隔（秒）",
+      "description": "gh pr list を呼ぶ間隔。30 秒より短くはしない",
+      "default": 120
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "push-gate",
+  "version": "0.1.0",
+  "description": "git push などを止め、人が承認ボタンを押した 1 回だけ通す",
+  "author": { "name": "Yuto Takagi", "url": "https://github.com/yut0takagi" },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/push-gate",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": ["git", "push", "approval", "guard"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "commands": {
+      "type": "string",
+      "title": "承認が要るコマンド",
+      "description": "カンマ区切り。各項目の語が順に並ぶコマンドを止める（オプションは間に挟まってよい）",
+      "default": "git push, gh pr merge"
+    }
+  }
+}

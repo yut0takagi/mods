@@ -1,0 +1,11 @@
+{
+  "name": "usage-meter",
+  "version": "0.1.0",
+  "description": "ターンごとのトークン数とキャッシュの割合をステータス行に出し、セッション中の推移をペインにグラフで描く",
+  "author": { "name": "Yuto Takagi", "url": "https://github.com/yut0takagi" },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/usage-meter",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": ["tokens", "usage", "cache", "chart"],
+  "types": "./types/index.d.ts"
+}

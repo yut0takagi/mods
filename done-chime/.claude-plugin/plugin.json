@@ -1,0 +1,24 @@
+{
+  "name": "done-chime",
+  "version": "0.1.0",
+  "description": "長いターンが終わったときと、許可を待っているときに音とトーストで知らせる",
+  "author": { "name": "Yuto Takagi", "url": "https://github.com/yut0takagi" },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/done-chime",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": ["notification", "sound", "toast"],
+  "userConfig": {
+    "minSeconds": {
+      "type": "number",
+      "title": "知らせるターンの長さ（秒）",
+      "description": "これより短いターンでは知らせない",
+      "default": 60
+    },
+    "sound": {
+      "type": "boolean",
+      "title": "音を鳴らす",
+      "description": "オフにするとトーストだけで知らせる",
+      "default": true
+    }
+  }
+}

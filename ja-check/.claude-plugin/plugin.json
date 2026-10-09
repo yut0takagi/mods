@@ -1,0 +1,28 @@
+{
+  "name": "ja-check",
+  "version": "0.1.0",
+  "description": "返答が英語で書き出されたら知らせる。設定で日本語での書き直しを頼める",
+  "author": {
+    "name": "Yuto Takagi",
+    "url": "https://github.com/yut0takagi"
+  },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/ja-check",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": [
+    "japanese",
+    "language"
+  ],
+  "userConfig": {
+    "mode": {
+      "type": "string",
+      "title": "英語で書き出されたとき",
+      "description": "toast は知らせるだけ。rewrite は日本語での書き直しを頼む（書き直しもまた英語なら知らせるだけにする）",
+      "default": "toast",
+      "options": [
+        "toast",
+        "rewrite"
+      ]
+    }
+  }
+}

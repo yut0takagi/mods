@@ -1,0 +1,20 @@
+{
+  "name": "branch-watch",
+  "version": "0.1.0",
+  "description": "ステータス行に worktree / branch を出し、どのセッションがどの worktree のどのブランチで作業しているかをペインに並べる。別のセッションが切り替えたブランチでの commit を止める",
+  "author": {
+    "name": "Yuto Takagi",
+    "url": "https://github.com/yut0takagi"
+  },
+  "homepage": "https://github.com/yut0takagi/mods/tree/main/branch-watch",
+  "repository": "https://github.com/yut0takagi/mods",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "branch",
+    "worktree",
+    "sessions",
+    "guard"
+  ],
+  "types": "./types/index.d.ts"
+}
