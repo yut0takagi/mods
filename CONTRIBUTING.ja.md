@@ -9,7 +9,6 @@
 - 不具合の報告と要望は [Issues](https://github.com/yut0takagi/mods/issues) に書いてください。テンプレートがあります
 - 新しい mod や、既存の mod の動きを変える提案は、PR の前に Issue で相談してください。誤字や小さな不具合の修正は、いきなり PR でかまいません
 - セキュリティにかかわる問題は Issue にせず、[SECURITY](SECURITY.md#日本語) の手順で知らせてください
-- やり取りは [行動規範](CODE_OF_CONDUCT.ja.md) に沿ってください
 
 ## 用意するもの
 

@@ -9,7 +9,6 @@ Bug reports, fixes and ideas for new mods are welcome. This page is for people w
 - Report bugs and request features in [Issues](https://github.com/yut0takagi/mods/issues). There are templates
 - Discuss a new mod, or a change to how an existing mod behaves, in an issue before opening a pull request. Typos and small bug fixes can go straight to a pull request
 - Do not report security problems as issues; follow [SECURITY](SECURITY.md)
-- Please follow the [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## What you need
 
