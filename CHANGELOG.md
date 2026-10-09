@@ -8,7 +8,6 @@ Notable changes to the mods in this repository. Each mod has its own version in 
 
 - Moved the detailed usage of each mod from the README into `docs/` (English) and `docs/ja/` (Japanese), with pages for getting started, the VS Code and Cursor extension, and troubleshooting. The READMEs are now short entry points
 - Added `CONTRIBUTING.md`, `SECURITY.md`, this changelog, and issue and pull request templates
-- Added a code of conduct (Contributor Covenant 2.1, in English and Japanese)
 - Each mod's `homepage` in `plugin.json` now points to its docs page instead of its folder
 
 ### Development
